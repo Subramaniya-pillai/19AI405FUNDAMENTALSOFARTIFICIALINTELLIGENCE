@@ -73,10 +73,7 @@ Begin<br>
 End<br>
 <hr>
 <h2>Sample Input and Output:</h2>
-SEND = 9567<br>
-MORE = 1085<br>
-<hr>
-MONEY = 10652<br>
-<hr>
+
+![git](./ai7.png)
 <h2>Result:</h2>
 <p> Thus a Cryptarithmetic Problem was solved using Python successfully</p>
