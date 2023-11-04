@@ -65,6 +65,7 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
 <hr>
 <h3>Sample Output</h3>
 <hr>
+
 ![git](./ai1.png)
 
 <hr>
