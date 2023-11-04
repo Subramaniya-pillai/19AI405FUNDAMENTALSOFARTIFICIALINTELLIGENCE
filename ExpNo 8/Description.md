@@ -25,6 +25,7 @@ It is assumed that there will always be a safe path that the agent can take to e
 <hr>
 <h1>Sample Input and Output:</h1>
 <hr>
+
 ![git](./ai8.png)
 
 <h1>Result:</h1>
