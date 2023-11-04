@@ -1,45 +1,34 @@
-from collections import deque
 from collections import defaultdict
+from collections import deque
 
-
-'''
-V E
-FOR EVERY EDGE
-U V
-7 9
-A B
-A C 
-A F
-C E
-C F
-C D
-D E 
-D G
-G F
-'''
-def bfs(graph,start,visited,path):
+def bfs(graph, start, visited, path):
     queue = deque()
     path.append(start)
     queue.append(start)
     visited[start] = True
     while len(queue) != 0:
-        tmpnode = queue.popleft()
-        for neighbour in graph[tmpnode]:
-            if visited[neighbour] == False:
+        tmp_node = queue.popleft()
+        for neighbour in graph[tmp_node]:
+            if not visited[neighbour]:
                 path.append(neighbour)
                 queue.append(neighbour)
                 visited[neighbour] = True
     return path
 
 graph = defaultdict(list)
-v,e = map(int,input().split())
+
+# Get the number of nodes and edges from the user
+n, e = map(int, input("Enter the number of nodes and edges: ").split())
+
+print("Enter the edges: ")
 for i in range(e):
-    u,v = map(str,input().split())
+    u, v = map(int, input().split())
+    u, v = str(u), str(v)  # Convert to strings for node labels
     graph[u].append(v)
     graph[v].append(u)
 
-start = '0'
-path = []
+start = input("Enter the starting node: ")
 visited = defaultdict(bool)
-traversedpath = bfs(graph,start,visited,path)
-print(traversedpath)
+path = []
+traversed_path = bfs(graph, start, visited, path)
+print("BFS Traversal Path:", traversed_path)
